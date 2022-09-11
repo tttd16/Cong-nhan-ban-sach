@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="./myacc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +21,7 @@
       rel="stylesheet"
       href="./assets/fonts/themify-icons/themify-icons.css"
     />
-    <title>Contact</title>
+    <title>my-account</title>
   </head>
   <body>
     <!-- header -->
@@ -51,99 +51,55 @@
         </div>
       </ul>
     </div>
-
+    <!-- title -->
     <div class="contact-title">
-      <h1>Contact</h1>
-    </div>
-    <div class="container-contact">
-      <div class="container-title-form">
-        <div class="title-form">
-          <h2>Need Help? Say Hello</h2>
-          <p>
-            An enim nullam tempor sapien gravida donec enim ipsum blandit porta
-            justo integer odio velna vitae auctor integer congue magna at purus
-          </p>
-        </div>
-      </div>
-      <div class="title-info">
-        <div class="title-info-left">
-          <div class="content-left">
-            <h2>Our Location</h2>
-            <p>
-              121 King Street, Melbourne,
-              <br />
-              Victoria 3000 Australia
-            </p>
-          </div>
-          <div class="content-left">
-            <h2>Let's Talk</h2>
-            <p>
-              Phone : +12 3 3456 7890
-              <br />
-              Fax : +12 9 8765 4321
-            </p>
-          </div>
-          <div class="content-left">
-            <h2>Working Hours</h2>
-            <p>
-              Mon - Fri: 8:30am - 7:30pm
-              <br />
-              Sat: 8:30am - 3:30pm
-            </p>
-          </div>
-        </div>
-        <div class="info-input">
-          <span>
-            <input
-              type="text"
-              name="your-name"
-              value
-              size="40"
-              placeholder="Your name"
-              class="input-form"
-            />
-          </span>
-          <br />
-          <span>
-            <input
-              type="email"
-              name="your-email"
-              value
-              size="40"
-              placeholder="Your E-Mail"
-              class="input-form"
-            />
-          </span>
-          <br />
-          <span>
-            <input
-              type="text"
-              name="your-subject"
-              value
-              size="40"
-              placeholder="Subject"
-              class="input-form"
-            />
-          </span>
-          <br />
-          <span>
-            <textarea
-              name="your-meassage"
-              id=""
-              cols="40"
-              rows="7"
-              placeholder="Meassage"
-              class="input-form"
-            ></textarea>
-          </span>
-          <br />
-          <p>
-            <input type="submit" value="Send Message" class="btn-send-mes" />
-          </p>
-        </div>
-      </div>
+      <h1>My account</h1>
     </div>
 
+    <!-- form -->
+    <div id="wrapper">
+      <div class="container">
+        <div class="row justify-content-around">
+          <form action="" class="col-md-12 p-4 border border-secondary">
+            <h1 class="text-upercase py-3">Login</h1>
+            <div class="form-group">
+              <label for="email username" class="my-2">Username or email address </label>
+              <input
+                type="email text"
+                name="email username"
+                id="email username"
+                class="form-control p-3"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password" class="my-2">Password </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                form="control"
+                class="form-control p-3"
+              />
+            </div>
+            <div class="form-check my-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckIndeterminate"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Remember me
+              </label>
+            </div>
+            <a class="btn btn-lg" style="background-color: #f76e2e; outline: none; color: #fff;" href="#" role="button">Login</a>
+            <div class="lost my-3">
+                <a href="#" class="link-primary">Lost your password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
     <section id="footer">
       <div class="container">
