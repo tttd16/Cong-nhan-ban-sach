@@ -39,6 +39,10 @@ section {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+#header .header__logo {
+  display: inline-flex;
+}
+
 #header .logo {
   margin-left: 6rem;
 }
@@ -55,8 +59,8 @@ section {
   margin-left: 6rem;
 }
 
-#nav > li:hover {
-  background-color: #ccc;
+#nav li a:hover {
+  color: #0275d8;
 }
 
 #nav li a {
