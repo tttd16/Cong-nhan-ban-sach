@@ -135,7 +135,7 @@
           </select>
         </div>
         <div class="container-book">
-          <ul>
+          <ul id="pagination">
             <li>
               <div class="card-product">
                 <span class="sale">Sale!</span>
@@ -154,7 +154,7 @@
                   <ins>$22.00</ins> <del>$27.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -179,7 +179,7 @@
                   <ins>$29.00</ins> <del>$35.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -204,7 +204,7 @@
                   <ins>$28.00</ins> <del>$35.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -226,7 +226,7 @@
                   <ins>$19.00</ins> <del>$25.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -251,7 +251,7 @@
                   <ins>$30.00</ins> <del>$35.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -276,7 +276,7 @@
                   <ins>$29.00</ins> <del>$49.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -301,7 +301,7 @@
                   <ins>$28.00</ins> <del>$30.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -326,7 +326,7 @@
                   <ins>$40.00</ins> <del>$45.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
@@ -351,13 +351,63 @@
                   <ins>$28.00</ins> <del>$50.00</del>
                 </div>
                 <div class="card-book__footer">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn-buy btn btn-primary">
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card-product">
+                <span class="sale">Sale!</span>
+                <img
+                  src="./assets/img/img book/the waterfall story.png"
+                  alt=""
+                />
+                <div class="card-product__title">
+                  <h4><a href="">The Waterfall story.</a></h4>
+                  <ion-icon name="star" class="star-yellow"></ion-icon>
+                  <ion-icon name="star" class="star-yellow"></ion-icon>
+                  <ion-icon name="star" class="star-yellow"></ion-icon>
+                  <ion-icon name="star" class="star-yellow"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <br />
+                  <ins>$23.00</ins> <del>$26.00</del>
+                </div>
+                <div class="card-book__footer">
+                  <button type="button" class="btn-buy btn btn-primary">
                     Add to cart
                   </button>
                 </div>
               </div>
             </li>
           </ul>
+
+          <!-- code Tay -->
+          <!-- <ul class="pagination-page">
+            <li class="pagination-page__item pagination-page__item-1">
+              <span>1</span>
+            </li>
+            <li class="pagination-page__item pagination-page__item-2">
+              <span>2</span>
+            </li>
+            <li class="pagination-page__item pagination-page__item-next">
+              <span>→</span>
+            </li>
+          </ul> -->
+
+
+          <!-- bootstrap pagination -->
+          <nav class="col-sm-9__footer" aria-label="...">
+            <ul class="pagination pagination-lg">
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">→</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -404,5 +454,8 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- file js code -->
+    <script src="./assets/js/books-store.js"></script>
   </body>
 </html>

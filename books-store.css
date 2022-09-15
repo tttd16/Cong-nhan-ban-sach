@@ -171,7 +171,7 @@ html {
 }
 
 /* product list */
-.container-book ul {
+.container-book #pagination {
   display: flex;
   flex-wrap: wrap;
 }
@@ -259,6 +259,29 @@ html {
   padding: 0.6rem 2.6rem;
   background-color: #0275d8;
 }
+
+/* .pagination-page {
+  display: flex;
+}
+
+.pagination-page .pagination-page__item > span {
+  border: 1px solid #dee2e6;
+  padding: 0.6rem 1rem;
+  font-size: 1.6rem;
+  color: #0275d8;
+  cursor: pointer;
+}
+
+.pagination-page .pagination-page__item-1 > span {
+  border-top-left-radius: 0.6rem;
+} */
+
+.col-sm-9 .col-sm-9__footer {
+  padding-left: 2rem;
+}
+
+
+
 
 /* footer */
 #footer {
