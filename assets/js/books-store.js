@@ -1,7 +1,7 @@
 // js-btn-modalbooks
 const modalBook = document.querySelector(".modal-book");
 
-// function hiện và đóng book1
+// //====================== function hiện và đóng book1 ==============================
 const btnBook1 = document.querySelector(".js-btn-modalbook1");
 const container_1 = document.querySelector(".js-container-1");
 const modalClosebook1 = document.querySelector(".js-modalbook-close1");
@@ -16,7 +16,7 @@ modalClosebook1.addEventListener("click", function close1() {
   container_1.classList.remove("open-1");
 });
 
-// function hiện và đóng book2
+// //====================== function hiện và đóng book2 ==============================
 const btnBook2 = document.querySelector(".js-btn-modalbook2");
 const container_2 = document.querySelector(".js-container-2");
 const modalClosebook2 = document.querySelector(".js-modalbook-close2");
@@ -31,7 +31,7 @@ modalClosebook2.addEventListener("click", function close2() {
   container_2.classList.remove("open-2");
 });
 
-// // function hiện và đóng book3
+// //====================== function hiện và đóng book3 ==============================
 const btnBook3s = document.querySelectorAll(".js-btn-modalbook3");
 const container_3 = document.querySelector(".js-container-3");
 const modalClosebook3 = document.querySelector(".js-modalbook-close3");
@@ -48,7 +48,7 @@ modalClosebook3.addEventListener("click", function close3() {
   container_3.classList.remove("open-3");
 });
 
-// // function hiện và đóng book4
+// //====================== function hiện và đóng book4 ==============================
 const btnBook4 = document.querySelector(".js-btn-modalbook4");
 const container_4 = document.querySelector(".js-container-4");
 const modalClosebook4 = document.querySelector(".js-modalbook-close4");
@@ -62,7 +62,7 @@ modalClosebook4.addEventListener("click", function close4() {
   container_4.classList.remove("open-4");
 });
 
-// // function hiện và đóng book5
+// //====================== function hiện và đóng book5 ==============================
 const btnBook5 = document.querySelector(".js-btn-modalbook5");
 const container_5 = document.querySelector(".js-container-5");
 const modalClosebook5 = document.querySelector(".js-modalbook-close5");
@@ -76,7 +76,7 @@ modalClosebook5.addEventListener("click", function close5() {
   container_5.classList.remove("open-5");
 });
 
-// // function hiện và đóng book6
+// // -------------------------function hiện và đóng book6 -------------------
 const btnBook6s = document.querySelectorAll(".js-btn-modalbook6");
 const container_6 = document.querySelector(".js-container-6");
 const modalClosebook6 = document.querySelector(".js-modalbook-close6");
@@ -93,7 +93,7 @@ modalClosebook6.addEventListener("click", function close6() {
   container_6.classList.remove("open-6");
 });
 
-// // function hiện và đóng book7
+// // -------------------------- function hiện và đóng book7 -----------------------
 const btnBook7s = document.querySelectorAll(".js-btn-modalbook7");
 const container_7 = document.querySelector(".js-container-7");
 const modalClosebook7 = document.querySelector(".js-modalbook-close7");
@@ -110,7 +110,7 @@ modalClosebook7.addEventListener("click", function close7() {
   container_7.classList.remove("open-7");
 });
 
-// // function hiện và đóng book8
+// //====================== function hiện và đóng book8 ==============================
 const btnBook8 = document.querySelector(".js-btn-modalbook8");
 const container_8 = document.querySelector(".js-container-8");
 const modalClosebook8 = document.querySelector(".js-modalbook-close8");
@@ -124,7 +124,7 @@ modalClosebook8.addEventListener("click", function close8() {
   container_8.classList.remove("open-8");
 });
 
-// // function hiện và đóng book9
+// //====================== function hiện và đóng book9 ==============================
 const btnBook9 = document.querySelector(".js-btn-modalbook9");
 const container_9 = document.querySelector(".js-container-9");
 const modalClosebook9 = document.querySelector(".js-modalbook-close9");
@@ -138,7 +138,7 @@ modalClosebook9.addEventListener("click", function close9() {
   container_9.classList.remove("open-9");
 });
 
-// // function hiện và đóng book10
+// //====================== function hiện và đóng book10 ==============================
 const btnBook10 = document.querySelector(".js-btn-modalbook10");
 const container_10 = document.querySelector(".js-container-10");
 const modalClosebook10 = document.querySelector(".js-modalbook-close10");
