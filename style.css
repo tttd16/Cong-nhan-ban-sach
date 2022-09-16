@@ -3,10 +3,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
 }
 
@@ -19,8 +20,28 @@ a {
 }
 
 section {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.2rem;
+}
+
+
+.scrolltop {
+  height: 4rem;
+  width: 3.4rem;
+  background-color: red;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  text-align: center;
+  z-index: 99;
+  line-height: 4rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 10%;
+}
+
+.scrolltop:hover {
+  background-color: #0275d8;
 }
 
 /* header */
@@ -35,12 +56,7 @@ section {
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
-#header .header__logo {
-  display: inline-flex;
 }
 
 #header .logo {
@@ -59,7 +75,7 @@ section {
   margin-left: 6rem;
 }
 
-#nav li a:hover {
+#nav > li a:hover {
   color: #0275d8;
 }
 
@@ -71,6 +87,7 @@ section {
   font-size: 2rem;
   color: black;
   font-weight: 600;
+  text-align: center;
 }
 
 #header .btn-myacc {
@@ -109,9 +126,11 @@ section {
 }
 
 .btn {
-  padding: 0.6rem 0.9rem;
+  padding: 0.9rem 1.2rem;
+  text-transform: capitalize;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
 }
 
 .btn-light {
@@ -166,12 +185,54 @@ section {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./assets/img/img-home/stack-books.jpg");
   color: #fff;
   padding-bottom: 10rem;
+}
+
+.homepage--slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.homepage--slide-1 {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/img/img-home/stack-books.jpg');
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.homepage--slide-2 {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/img/img-home/flowers-and-book-reading.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.homepage--slide-3 {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/img/img-home/book-heart-paper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.mySlide {
+  transition: all .9s ease-in-out;
+}
+
+.appear {
+  opacity: 1;
 }
 
 #content {
@@ -195,6 +256,7 @@ section {
   font-size: 4rem;
   letter-spacing: 0.3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 #description p {
@@ -211,10 +273,11 @@ section {
   background-color: rgba(248, 249, 250, 1);
   color: #333;
   padding: 6rem 4rem;
+  border-radius: 0.4rem;
 }
 
 #contact-form h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   letter-spacing: 0.2rem;
 }
@@ -225,11 +288,19 @@ section {
 }
 
 #contact-form div input {
+  font-size: 1.6rem;
   margin-top: 1rem;
   border: 1px solid rgb(212, 200, 200);
   border-radius: 0.2rem;
-  padding: 0.8rem 0.4rem;
+  padding: 1.2rem 0.8rem;
   width: 100%;
+  font-weight: 100;
+  margin-bottom: 0.6rem;
+  border-radius: 0.4rem;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 input:focus {
@@ -285,15 +356,15 @@ input:focus {
 }
 
 .content-book {
-  display: flex;
+  display: flex !important;
 }
 
-.content-icon {
+/* .content-icon {
   border-radius: 50%;
   background-color: #0275d8;
   text-align: center;
-  position: relative;
   margin-right: 3rem;
+  position: relative;
 }
 
 .content-book ion-icon {
@@ -302,18 +373,57 @@ input:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
-  height: 40%;
   color: rgba(248, 249, 250, 1);
+} */
+
+.content-icon {
+  background-color: #0275d8;
+  min-width: 4rem;
+  height: 12rem;
+  margin-bottom: 1rem;
+  font-size: 7rem;
+  position: relative;
+  margin-right: 2.6rem;
+  border-radius: 50%;
+}
+
+.content-icon ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+  color: #fff;
 }
 
 #books {
   padding-top: 10rem;
   padding-bottom: 10rem;
+  position: relative;
+  display: block;
 }
+
+.book_wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 
 .books {
   display: flex;
+  position: relative;
+  transition: transform 0.25s linear;
+  height: 100%;
+}
+
+.book-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  flex: 1 0 100%;
 }
 
 .book-img {
@@ -321,6 +431,7 @@ input:focus {
   vertical-align: top;
   width: 33.333%;
   position: relative;
+  object-fit: cover;
 }
 
 .label-sales {
@@ -347,7 +458,7 @@ input:focus {
 }
 
 .book-description {
-  width: 77.7777%;
+  width: 66.66667%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -387,6 +498,27 @@ input:focus {
   padding-bottom: 0.8rem;
 }
 
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1.4rem;
+  margin-top: -2.2rem;
+  color: #fff;
+  background-color: #0275d8;
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  border-radius: 10%;
+  
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 2rem;
+}
+
 #counterup {
   width: 100vw;
   height: auto;
@@ -399,21 +531,34 @@ input:focus {
   justify-content: space-between;
 }
 
-.subscriber {
-  border: 0.6rem solid #f08940;
-  height: 14rem;
-  width: 14rem;
-  color: #fff;
+.counter--content {
+  border: 5px solid rgba(255,255,255,.5);
+  display: inline-block;
+  min-width: 24rem;
+  height: 24rem;
   border-radius: 50%;
-  padding-top: 3rem;
   position: relative;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  text-align: center;
+  color: rgba(255,255,255,.5);
+  font-size: 3rem;
+  font-weight: 200;
 }
 
-.subscriber span {
-  text-align: center;
-  line-height: 3rem;
+.counter--content span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter--content:after {
+  border: 0.1rem solid rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .5);
+  bottom: 4rem;
+  content: "";
+  left: calc(50% - 46px);
+  position: absolute;
+  width: 40%;
 }
 
 #testimonial {
@@ -424,6 +569,7 @@ input:focus {
 .testimonial {
   text-align: center;
   padding: 0 6rem;
+  position: relative;
 }
 
 .testimonial .feedback {
@@ -439,16 +585,21 @@ input:focus {
   margin-bottom: 4rem;
 }
 
+.hide {
+  display: none;
+}
+
 .testimonial .feedback-detail {
   border: 1px solid rgb(191, 172, 172);
   background-color: rgb(255, 255, 255);
   position: relative;
   padding: 12rem 10rem;
   margin-top: 10rem;
+  float: left;
 }
 
 .feedback-detail .author {
-  border: 1rem solid #0275d8;
+  outline: 1rem solid #0275d8;
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
@@ -493,21 +644,52 @@ input:focus {
 }
 
 .active span {
-  background: #0275d8;
+  background-color: #0275d8;
+  transition: all 0.9s ease;
 }
 
 #play-video {
   margin-bottom: 8rem;
+  position: relative;
 }
 
-.play-video {
-  background-image: url("./img/flowers-and-book-reading.jpg");
+.play-img {
+  background-image: url("./assets/img/img-home/flowers-and-book-reading.jpg");
   min-height: 50rem;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  filter: brightness(60%);
+  overflow: hidden;
 }
+
+.play-video span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.play-video ion-icon {
+  border: .2rem solid #fff;
+  text-align: center;
+  color: #0275d8;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.play-video ion-icon:hover {
+  cursor: pointer;
+  background-color: #fff;
+  transform: scale(1.2);
+  transition: all .5s ease-in-out;
+}
+
 
 .blog .blog-header {
   text-align: center;
@@ -527,7 +709,8 @@ input:focus {
 
 .blog-item {
   width: 30%;
-  border: 1px solid #ced4da;
+  outline: 1px solid #ced4da;
+  border-radius: 0.4rem;
 }
 
 .blog-item__img {
@@ -537,6 +720,7 @@ input:focus {
 }
 
 .blog-item__img img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -583,7 +767,7 @@ input:focus {
 }
 
 .view-more {
-  border: 0.2rem solid #ced4da;
+  outline: 0.2rem solid #ced4da;
   display: inline-block;
   padding: 1rem 3.2rem;
   border-radius: 50rem;
@@ -593,7 +777,8 @@ input:focus {
 .view-more:hover {
   cursor: pointer;
   background-color: #333;
-  border: 0.2rem solid transparent;
+  transition: all 0.8s ease;
+  outline: none;
 }
 
 .view-more:hover a {
@@ -603,7 +788,7 @@ input:focus {
 /* footer */
 #footer {
   background-color: #333;
-  padding: 10rem 10rem;
+  padding: 20rem 10rem;
   text-align: center;
   font-size: 1.2rem;
   margin-top: 10rem;
@@ -628,6 +813,13 @@ input:focus {
   margin-right: 1.2rem;
 }
 
+.icon-social span:hover {
+  cursor: pointer;
+  background-color:#0275d8;
+  color: #fff;
+  transition: all .2s ease;
+}
+
 .copyright {
   font-size: 1.6rem;
   color: #fff;
@@ -636,4 +828,9 @@ input:focus {
 .copyright a {
   color: #0275d8;
   text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+  transition: all .2s ease;
 }
