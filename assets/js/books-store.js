@@ -82,9 +82,9 @@ const container_6 = document.querySelector(".js-container-6");
 const modalClosebook6 = document.querySelector(".js-modalbook-close6");
 
 for (const btnBook6 of btnBook6s) {
-  btnBook6.addEventListener("click", function showBook3() {
+  btnBook6.addEventListener("click", function showBook6() {
     modalBook.classList.add("open");
-    container_3.classList.add("open-3");
+    container_6.classList.add("open-6");
   });
 }
 
