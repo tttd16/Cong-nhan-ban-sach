@@ -10,6 +10,10 @@ html {
   font-size: 10px;
 }
 
+.star-yellow {
+  color: rgb(254, 196, 45);
+}
+
 /* header */
 
 #header {
@@ -136,10 +140,6 @@ html {
   text-decoration: underline;
 }
 
-.card-book__title .star-yellow {
-  color: rgb(254, 196, 45);
-}
-
 .card-book__title > ins {
   text-decoration: none;
 }
@@ -217,15 +217,16 @@ html {
   max-width: 100%;
 }
 
-.card-product__title h4 a {
+.card-product__title h4 button {
+  background-color: #fff;
+  border: none;
   font-size: 2.4rem;
-  text-decoration: none;
   color: #212529;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.card-product__title h4 a:hover {
+.card-product__title h4 button:hover {
   color: #0275d8;
 }
 
@@ -280,9 +281,9 @@ html {
   padding-left: 2rem;
 }
 
-
-
-
+.col-sm-9 .col-sm-9__footer .page-link {
+  position: initial;
+}
 /* footer */
 #footer {
   background-color: #333;
@@ -320,4 +321,205 @@ html {
 .copyright a {
   color: #0275d8;
   text-decoration: none;
+}
+
+/* modal */
+
+.modal-book {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-book.open {
+  display: flex;
+}
+
+.modal-book__container {
+  position: relative;
+  width: 90rem;
+  height: auto;
+  max-width: calc(100% - 32px);
+  background-color: #fff;
+  display: none;
+}
+
+.container-1.open-1 {
+  display: block;
+}
+
+.container-2.open-2 {
+  display: block;
+}
+
+.container-3.open-3 {
+  display: block;
+}
+
+.container-4.open-4 {
+  display: block;
+}
+
+.container-5.open-5 {
+  display: block;
+}
+
+.container-6.open-6 {
+  display: block;
+}
+
+.container-7.open-7 {
+  display: block;
+}
+
+.container-8.open-8 {
+  display: block;
+}
+
+.container-9.open-9 {
+  display: block;
+}
+
+.container-10.open-10 {
+  display: block;
+}
+
+.modal-book__close {
+  position: absolute;
+  color: black;
+  right: 0;
+  top: 0;
+  font-size: 3rem;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.modal-book__close:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.modal-book__card {
+  display: flex;
+  width: 90rem;
+    height: 30rem;
+}
+
+.modal-book__card > .sale {
+  position: absolute;
+    background-color: #0275d8;
+    color: #fff;
+    border-radius: 50%;
+    min-width: 4rem;
+    min-height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    padding: 0.3rem;
+    margin: 1rem 0rem 0rem 1rem;
+}
+
+.modal-book__card > img {
+  width: 25rem;
+  height: auto;
+}
+
+.modal-book__title {
+  font-size: 1.6rem;
+  padding-left: 5rem;
+}
+
+.modal-book__title > h2 {
+  font-size: 3.2rem;
+}
+
+.modal-book__star {
+  font-size: 2.4rem;
+}
+
+.modal-book__price del {
+  font-size: 3.2rem;
+  font-weight: normal;
+  color: #888888;
+}
+
+
+.modal-book__price ins {
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #0275d8;
+}
+
+.modal-book__infor {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.modal-book__infor > li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6 ;
+  display: flex;
+}
+
+.modal-book__infor > li > strong {
+  width: 25%;
+}
+
+.modal-book__infor > li > span {
+  width: 75%;
+}
+
+.modal-book__button > button {
+  font-size: 2rem;
+}
+
+.modal-book__footer {
+margin-top: 3rem;
+font-size: 1.6rem;
+}
+
+.modal-book__footer--header {
+display: flex;
+list-style-type: none;
+padding: 0;
+border-bottom: 1px solid #dee2e6;
+margin-bottom: 0;
+}
+
+.modal-book__footer--header > li > a {
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  display: block;
+}
+
+.modal-book__footer--header > li > .a-d {
+  color: #495057;
+    background-color: #fff;
+    margin-bottom: -0.1rem;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.modal-book__footer--header > li > .a-r {
+}
+
+.modal-book__footer--description {
+padding-top: 1rem;
+padding-left: 2rem;
+margin-top: -0.1rem;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-top-width: 0;
+}
+
+.modal-book__footer--description > h2 {
+  font-size: 3.2rem;
 }
