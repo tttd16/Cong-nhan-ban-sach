@@ -132,11 +132,14 @@ html {
   font-size: 1.6rem;
 }
 
-.card-book__title a {
-  text-decoration: none;
+.card-book__title button {
+  background-color: #fff;
+  border: none;
+  color: #0275d8;
+  text-align: left;
 }
 
-.card-book__title a:hover {
+.card-book__title button:hover {
   text-decoration: underline;
 }
 
@@ -224,6 +227,7 @@ html {
   color: #212529;
   font-weight: 700;
   line-height: 1.2;
+  text-align: left;
 }
 
 .card-product__title h4 button:hover {
