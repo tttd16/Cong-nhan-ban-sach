@@ -79,6 +79,14 @@ html {
   font-size: 2rem;
 }
 
+.btn {
+  padding: 0.9rem 1.2rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+}
+
 /* --- */
 
 .contact-title {
@@ -102,6 +110,7 @@ html {
 /*  */
 #wrapper {
   margin-top: 10rem;
+  font-family: Oswald;
 }
 
 #wrapper h1 {

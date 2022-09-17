@@ -79,6 +79,14 @@ html {
   font-size: 2rem;
 }
 
+.btn {
+  padding: 0.9rem 1.2rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+}
+
 /* --- */
 
 .contact-title {
@@ -105,6 +113,7 @@ html {
   padding-top: 10rem;
   margin-left: 10rem;
   margin-right: 10rem;
+  font-family: var(--body-font-family);;
 }
 
 .container-title-form {
@@ -119,6 +128,7 @@ html {
 
 .container-title-form .title-form > h2 {
   font-size: 5.6rem;
+  font-weight: 700;
 }
 
 .container-title-form .title-form > p {
