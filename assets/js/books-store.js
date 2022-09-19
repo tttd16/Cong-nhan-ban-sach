@@ -189,7 +189,7 @@ function addcart(productPrice, productName, productImg) {
     productName +
     '</div><img class="cart__img" src="' +
     productImg +
-    '" alt=""></img></div><div class="cart__quantity"><p class="cart__amount">1</p> <strong> x $</strong>  <span>' +
+    '" alt=""></img></div><div class="cart__quantity"><input class="cart__amount" type="number" value="1" min="0"> <strong> x $</strong>  <span>' +
     productPrice +
     "</span></div>";
   cartShopping.innerHTML = cartContent;
@@ -207,16 +207,18 @@ function cartTotal() {
   );
   let result = 0;
   for (let i = 0; i < cartItem.length; i++) {
-    let pValue = cartItem[i].querySelector(
+    let inputValue = cartItem[i].querySelector(
       ".cart__quantity .cart__amount"
-    ).innerHTML;
+    ).value;
+    console.log(inputValue);
     let spanPrice = cartItem[i].querySelector(".cart__quantity span").innerHTML;
-    totalCart = pValue * spanPrice;
+    totalCart = inputValue * spanPrice;
     result = result + totalCart;
   }
 
   let subTotal = document.querySelector(".cart__total span");
   subTotal.innerHTML = result;
+  inputChange();
 }
 
 // ================== Delete cart ==================
@@ -226,8 +228,21 @@ function deleteCart() {
   );
   for (let i = 0; i < cartItem.length; i++) {
     let cartClose = document.getElementById("icon__close");
-    console.log(cartClose)
-    
+    console.log(cartClose);
   }
 }
 
+//=================== Total change input ========
+function inputChange() {
+  let cartItem = document.querySelectorAll(
+    ".cart__body .cart__wrapper--shopping"
+  );
+  for (let i = 0; i < cartItem.length; i++) {
+    let inputChangeValue = cartItem[i].querySelector(
+      ".cart__quantity .cart__amount"
+    );
+    inputChangeValue.addEventListener("change", function () {
+      cartTotal();
+    });
+  }
+}

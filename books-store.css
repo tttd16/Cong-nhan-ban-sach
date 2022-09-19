@@ -176,6 +176,12 @@ html {
   justify-content: center;
 }
 
+.cart__quantity input {
+  width: 3.5rem;
+  border-color: #dee2e6;
+  border-radius: 8px;
+}
+
 .cart__quantity strong {
   font-weight: 400;
 }
