@@ -152,23 +152,82 @@ modalClosebook10.addEventListener("click", function close10() {
   container_10.classList.remove("open-10");
 });
 
-// const btnBuy = document.querySelectorAll('.btn-buy');
-// // console.log(btnBuy)
+// =============== ADD to Card ==================
 
-// btnBuy.forEach(function(button,index) {
-//     button.addEventListener("click", function(event) {
-//         let btnItem = event.target
-//         let cardProduct = btnItem.parentElement.parentElement
-//         let productImg = cardProduct.querySelector("img").src
-//         let productName = cardProduct.querySelector("h4 a").innerText
-//         let productPrice = cardProduct.querySelector("ins").innerText
+const btnBuy = document.querySelectorAll(".btn-buy");
+btnBuy.forEach(function (button, index) {
+  button.addEventListener("click", function (event) {
+    let btnItem = event.target;
+    let cardProduct = btnItem.parentElement.parentElement;
+    let productImg = cardProduct.querySelector(".card-product > img").src;
+    let productName = cardProduct.querySelector(
+      ".card-product__title h4 button"
+    ).innerText;
+    let productPrice = cardProduct.querySelector(
+      ".card-product__title ins span"
+    ).innerText;
+    addcart(productPrice, productName, productImg);
+  });
+});
 
-//         addcart(productPrice,productName,productImg)
-//     })
-// })
+function addcart(productPrice, productName, productImg) {
+  let cartShopping = document.createElement("div");
+  cartShopping.classList = "cart__wrapper--shopping";
+  let cartItem = document.querySelectorAll(
+    ".cart__body .cart__wrapper--shopping"
+  );
+  for (let i = 0; i < cartItem.length; i++) {
+    let productBook = document.querySelectorAll(".cart__name");
+    if (productBook[i].innerHTML == productName) {
+      alert("Sản phẩm đã có trong giỏ");
+      return;
+    }
+  }
 
-// function addcart(productPrice,productName,productImg) {
-//     let addtr = document.createElement("tr")
-//     let trcontent = productPrice
+  let cartContent =
+    '<div class="cart__shopping"><div class="cart__close"><ion-icon id="icon__close" name="close-outline"></ion-icon></div><div class="cart__name">' +
+    productName +
+    '</div><img class="cart__img" src="' +
+    productImg +
+    '" alt=""></img></div><div class="cart__quantity"><p class="cart__amount">1</p> <strong> x $</strong>  <span>' +
+    productPrice +
+    "</span></div>";
+  cartShopping.innerHTML = cartContent;
+  let cartBody = document.querySelector(".cart__body");
+  cartBody.append(cartShopping);
 
-// }
+  cartTotal();
+}
+
+//  ============================ TOTAL Price ======================
+
+function cartTotal() {
+  let cartItem = document.querySelectorAll(
+    ".cart__body .cart__wrapper--shopping"
+  );
+  let result = 0;
+  for (let i = 0; i < cartItem.length; i++) {
+    let pValue = cartItem[i].querySelector(
+      ".cart__quantity .cart__amount"
+    ).innerHTML;
+    let spanPrice = cartItem[i].querySelector(".cart__quantity span").innerHTML;
+    totalCart = pValue * spanPrice;
+    result = result + totalCart;
+  }
+
+  let subTotal = document.querySelector(".cart__total span");
+  subTotal.innerHTML = result;
+}
+
+// ================== Delete cart ==================
+function deleteCart() {
+  let cartItem = document.querySelectorAll(
+    ".cart__body .cart__wrapper--shopping"
+  );
+  for (let i = 0; i < cartItem.length; i++) {
+    let cartClose = document.getElementById("icon__close");
+    console.log(cartClose)
+    
+  }
+}
+
