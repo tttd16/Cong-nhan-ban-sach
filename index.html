@@ -39,7 +39,7 @@
       </div>
 
       <div class="header__myacc">
-        <ion-icon name="cart-outline"></ion-icon>
+        <ion-icon name="cart-outline" id="js-cart-modal"></ion-icon>
         <a class="my__acc btn" href="./myacc.html"
           >My account</a
         >
@@ -669,6 +669,37 @@
         </div>
       </div>
     </section>
+
+    <!-- -----------------Modal Cart----------- -->
+    <div class="modal-wrapper js-modal-wrapper">
+
+      <div class="modal-cart js-modal-cart">
+        <div class="modal-cart__header">
+          <h5>Cart</h5>
+          <ion-icon id="cart-icon" name="close-outline"></ion-icon>
+        </div>
+        <div class="modal-cart__container">
+          <div class="modal-cart__content">
+            <div class="modal-cart__shopping">
+              <div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div>
+              <div class="modal-cart__name" href="">Forever Is A Long Time To Be Wrong</div>
+              <div class="modal-cart__img"><img class="" src="./assets/img/img book/forever is a long time.jpg" alt=""></img></div>
+            </div>
+            <div class="modal-cart__quantity">
+              <input class="cart__amount" type="number" value="1" min="0">
+              <div><strong> $</strong><span>22</span></div>
+            </div>
+            <div class="modal-cart__total">
+              <p> <strong>Subtotal:</strong> <span>$<span class="modal-cart__price">22.00</span></span></p>
+            </div>
+            <div class="modal-cart__btn">
+              <button class="modal-cart__btn--view">View cart</button>
+              <button class="modal-cart__btn--check">Check out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

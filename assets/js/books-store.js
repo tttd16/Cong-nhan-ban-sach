@@ -184,7 +184,6 @@ function addcart(productPrice, productName, productImg) {
     }
   }
 
-
   let cartContent =
     '<div class="cart__shopping"><div class="cart__close"><ion-icon class="icon__close" name="close-outline"></ion-icon></div><div class="cart__name">' +
     productName +
@@ -197,7 +196,7 @@ function addcart(productPrice, productName, productImg) {
   let cartBody = document.querySelector(".cart__body");
   cartBody.append(cartShopping);
   cartTotal();
-  deleteCart()
+  deleteCart();
 }
 
 //  ============================ TOTAL Price ======================
@@ -227,12 +226,13 @@ function deleteCart() {
   );
   for (let i = 0; i < cartItem.length; i++) {
     let cartClose = document.querySelectorAll(".icon__close");
-    cartClose[i].addEventListener("click", function(event) {
-      let cartDelete = event.target
-      let cartCloseDelete = cartDelete.parentElement.parentElement.parentElement
-      cartCloseDelete.remove()
-      cartTotal()
-    })
+    cartClose[i].addEventListener("click", function (event) {
+      let cartDelete = event.target;
+      let cartCloseDelete =
+        cartDelete.parentElement.parentElement.parentElement;
+      cartCloseDelete.remove();
+      cartTotal();
+    });
   }
 
   inputChange();
@@ -253,4 +253,19 @@ function inputChange() {
   }
 }
 
-//
+// ==================== Cart ===============
+
+let modalWrapper = document.querySelector(".js-modal-wrapper");
+let modalCart = document.querySelector(".js-modal-cart");
+let cartIcon = document.getElementById("js-cart-modal");
+let cartX = document.getElementById("cart-icon");
+
+cartIcon.addEventListener("click", function showCart() {
+  modalCart.classList.add("open-cart");
+  modalWrapper.classList.add("open-cart__wrapper");
+});
+
+cartX.addEventListener("click", function closeCart() {
+  modalCart.classList.remove("open-cart");
+  modalWrapper.classList.remove("open-cart__wrapper");
+});
