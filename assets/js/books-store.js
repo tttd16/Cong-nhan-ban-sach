@@ -184,19 +184,20 @@ function addcart(productPrice, productName, productImg) {
     }
   }
 
+
   let cartContent =
-    '<div class="cart__shopping"><div class="cart__close"><ion-icon id="icon__close" name="close-outline"></ion-icon></div><div class="cart__name">' +
+    '<div class="cart__shopping"><div class="cart__close"><ion-icon class="icon__close" name="close-outline"></ion-icon></div><div class="cart__name">' +
     productName +
     '</div><img class="cart__img" src="' +
     productImg +
-    '" alt=""></img></div><div class="cart__quantity"><input class="cart__amount" type="number" value="1" min="0"> <strong> x $</strong>  <span>' +
+    '" alt=""></img></div><div class="cart__quantity"><input class="cart__amount" type="number" value="1" min="0"> <div><strong> $</strong>  <span>' +
     productPrice +
-    "</span></div>";
+    "</span></div></div>";
   cartShopping.innerHTML = cartContent;
   let cartBody = document.querySelector(".cart__body");
   cartBody.append(cartShopping);
-
   cartTotal();
+  deleteCart()
 }
 
 //  ============================ TOTAL Price ======================
@@ -210,7 +211,6 @@ function cartTotal() {
     let inputValue = cartItem[i].querySelector(
       ".cart__quantity .cart__amount"
     ).value;
-    console.log(inputValue);
     let spanPrice = cartItem[i].querySelector(".cart__quantity span").innerHTML;
     totalCart = inputValue * spanPrice;
     result = result + totalCart;
@@ -218,7 +218,6 @@ function cartTotal() {
 
   let subTotal = document.querySelector(".cart__total span");
   subTotal.innerHTML = result;
-  inputChange();
 }
 
 // ================== Delete cart ==================
@@ -227,9 +226,16 @@ function deleteCart() {
     ".cart__body .cart__wrapper--shopping"
   );
   for (let i = 0; i < cartItem.length; i++) {
-    let cartClose = document.getElementById("icon__close");
-    console.log(cartClose);
+    let cartClose = document.querySelectorAll(".icon__close");
+    cartClose[i].addEventListener("click", function(event) {
+      let cartDelete = event.target
+      let cartCloseDelete = cartDelete.parentElement.parentElement.parentElement
+      cartCloseDelete.remove()
+      cartTotal()
+    })
   }
+
+  inputChange();
 }
 
 //=================== Total change input ========
@@ -246,3 +252,5 @@ function inputChange() {
     });
   }
 }
+
+//
