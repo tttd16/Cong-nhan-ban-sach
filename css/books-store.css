@@ -125,9 +125,13 @@ html {
 /* ========================== CART =========================== */
 
 .cart {
-  display: grid;
+  display: none;
   font-size: 1.6rem;
   row-gap: 2rem;
+}
+
+.cart.open-cart__list {
+  display: grid;
 }
 
 .cart__container {

@@ -14,3 +14,6 @@ cartX.addEventListener("click", function closeCart() {
   modalCart.classList.remove("open-cart");
   modalWrapper.classList.remove("open-cart__wrapper");
 });
+
+
+// ===============NAV===========
