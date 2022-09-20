@@ -37,6 +37,7 @@ html {
 #nav {
   display: flex;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 #nav li a:hover {
@@ -175,6 +176,13 @@ html {
   border-radius: 30%;
   line-height: 2rem;
   margin-right: 1.2rem;
+}
+
+.icon-social span:hover {
+  cursor: pointer;
+  background-color: #0275d8;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 
 .copyright {

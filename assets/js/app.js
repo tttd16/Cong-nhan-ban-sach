@@ -227,3 +227,19 @@ cartX.addEventListener("click", function closeCart() {
   modalCart.classList.remove("open-cart");
   modalWrapper.classList.remove("open-cart__wrapper");
 });
+
+
+/**================PLAY VIDEO========================================== */
+let btnPlay = document.querySelector(".btn-play");
+let activeVideo = document.querySelector(".active-video");
+let btnClose = document.querySelector(".btn-close");
+let page = document.getElementById("page");
+
+btnPlay.addEventListener("click", () => {
+    activeVideo.style.display = "block";
+});
+
+btnClose.addEventListener("click", () => {
+    activeVideo.style.display = "none";
+})
+/**==================================================================== */

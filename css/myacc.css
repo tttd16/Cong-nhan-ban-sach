@@ -11,6 +11,11 @@ html {
 }
 
 /* header */
+p {
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
 
 #header {
   position: fixed;
@@ -37,6 +42,7 @@ html {
 #nav {
   display: flex;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 #nav li a:hover {
@@ -87,6 +93,25 @@ html {
   border: none;
   border-radius: 0.4rem;
   font-size: 1.6rem;
+}
+
+.btn-signup {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  margin-top: 2rem;
+  font-size: 300;
+  padding: 1.4rem;
+  border: 1px solid #333;
+  border-radius: 0.4rem;
+  transition: all 0.6s ease;
+}
+
+.btn-signup:hover {
+  background-color: #0275d8;
+  color: #fff;
+  border: 1px solid transparent;
 }
 
 /* --- */

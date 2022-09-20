@@ -71,6 +71,7 @@ section {
 #nav {
   display: flex;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 #nav li a:hover {
@@ -662,6 +663,23 @@ input:focus {
 #play-video {
   margin-bottom: 8rem;
   position: relative;
+}
+
+.active-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+
+.btn-close {
+  position: absolute;
+  top: -7%;
+  right: -2%;
+  cursor: pointer;
+  color: #fff;
 }
 
 .play-img {

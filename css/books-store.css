@@ -40,6 +40,7 @@ html {
 
 #nav {
   display: flex;
+  margin-bottom: 0;
   list-style-type: none;
 }
 
@@ -205,7 +206,6 @@ html {
 .cart__btn {
   margin-bottom: 1.6rem;
   display: flex;
-  margin-bottom: 1.6rem;
 }
 
 .cart__btn button {
@@ -441,6 +441,13 @@ html {
   border-radius: 30%;
   line-height: 2rem;
   margin-right: 1.2rem;
+}
+
+.icon-social span:hover {
+  cursor: pointer;
+  background-color: #0275d8;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 
 .copyright {
