@@ -27,7 +27,7 @@
     <!-- header -->
     <div id="header">
       <div class="header__log">
-        <a href="./index.html" class="header__logo--img">
+        <a href="./home.html" class="header__logo--img">
           <img
             class="logo"
             style="width: 150px"
@@ -36,10 +36,10 @@
           />
         </a>
       </div>
-      <div class="header__nav">
-        <ul id="nav">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
+      <div id="header__nav">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a class="active" href="./about.html">About</a></li>
           <li><a href="./contact.html">Contact</a></li>
           <li><a href="./books-store.html">Books Store</a></li>
         </ul>
@@ -47,7 +47,7 @@
 
       <div class="header__myacc">
         <ion-icon name="cart-outline" id="js-cart-modal"></ion-icon>
-        <a class="my__acc btn" href="./myacc.html">My account</a>
+        <a class="my__acc btn" href="./index.html">My account</a>
       </div>
     </div>
     <!-- Title -->
@@ -144,7 +144,6 @@
 
     <!-- -----------------Modal Cart----------- -->
     <div class="modal-wrapper js-modal-wrapper">
-
       <div class="modal-cart js-modal-cart">
         <div class="modal-cart__header">
           <h5>Cart</h5>
@@ -164,7 +163,10 @@
               </div>
             </div> -->
             <div class="modal-cart__total">
-              <p> <strong>Subtotal:</strong> <span>$<span class="modal-cart__price">22.00</span></span></p>
+              <p>
+                <strong>Subtotal:</strong>
+                <span>$<span class="modal-cart__price">22.00</span></span>
+              </p>
             </div>
             <div class="modal-cart__btn">
               <button class="modal-cart__btn--view">View cart</button>
@@ -194,6 +196,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./assets/js/about.js" ></script>
+    <script src="./assets/js/about.js"></script>
   </body>
 </html>

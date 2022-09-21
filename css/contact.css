@@ -34,23 +34,27 @@ html {
   margin-left: 6rem;
 }
 
-#nav {
+#header__nav ul {
   display: flex;
   list-style-type: none;
   margin-bottom: 0;
 }
 
-#nav li a:hover {
+#header__nav ul li a:hover {
   color: #0275d8;
 }
 
-#nav li a {
+#header__nav ul li a {
   text-decoration: none;
   display: block;
   font-size: 2rem;
   color: black;
   font-weight: 700;
   padding: 0.8rem 5.5rem;
+}
+
+#header__nav ul li a.active {
+  color: #0275d8;
 }
 
 #header .header__myacc {
@@ -91,7 +95,6 @@ html {
 }
 
 .slide {
-
   color: #0275d8;
 }
 
@@ -255,7 +258,6 @@ html {
   text-decoration: none;
   font-family: "Bebas Neue", cursive;
 }
-
 
 /* ============== MODAL CART=============== */
 

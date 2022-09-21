@@ -14,3 +14,16 @@ cartX.addEventListener("click", function closeCart() {
   modalCart.classList.remove("open-cart");
   modalWrapper.classList.remove("open-cart__wrapper");
 });
+
+
+// NAV
+
+// let navbar = document.querySelector("#header__nav").querySelectorAll("a")
+
+// navbar.forEach(element => {
+//   element.addEventListener('click', function() {
+//     navbar.forEach(nav=>nav.classList.remove("active"))
+
+//     this.classList.add("active")
+//   })
+// })

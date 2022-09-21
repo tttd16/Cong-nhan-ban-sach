@@ -38,23 +38,27 @@ html {
   margin-left: 6rem;
 }
 
-#nav {
+#header__nav ul {
   display: flex;
-  margin-bottom: 0;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
-#nav li a:hover {
+#header__nav ul li a:hover {
   color: #0275d8;
 }
 
-#nav li a {
+#header__nav ul li a {
   text-decoration: none;
   display: block;
   font-size: 2rem;
   color: black;
   font-weight: 700;
   padding: 0.8rem 5.5rem;
+}
+
+#header__nav ul li a.active {
+  color: #0275d8;
 }
 
 #header .header__myacc {
@@ -342,9 +346,17 @@ html {
   border-radius: 1rem;
 }
 
+.card-product > img:hover {
+  transform: scale(1.05);
+}
+
 .card-product__title {
   padding: 1.2rem;
   max-width: 100%;
+}
+
+.card-product__title:hover {
+  transform: scale(1.1);
 }
 
 .card-product__title h4 button {
