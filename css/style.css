@@ -816,7 +816,7 @@ input:focus {
 /* footer */
 #footer {
   background-color: #333;
-  padding: 20rem 10rem;
+  padding: 10rem 10rem;
   text-align: center;
   font-size: 1.2rem;
   margin-top: 10rem;
@@ -825,18 +825,19 @@ input:focus {
 }
 
 .icon-social {
-  font-size: 2rem;
+  font-size: 3rem;
+  display: flex;
   margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-social span {
-  height: 2rem;
-  width: 2rem;
   border: 0.2rem solid #0275d8;
   color: #0275d8;
   text-align: center;
   padding: 1.2rem;
-  border-radius: 30%;
+  border-radius: 50%;
   line-height: 2rem;
   margin-right: 1.2rem;
 }

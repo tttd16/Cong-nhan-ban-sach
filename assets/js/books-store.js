@@ -1,9 +1,6 @@
 // js-btn-modalbooks
 const modalBook = document.querySelector(".modal-book");
 
-
-
-
 // //====================== function hiện và đóng book1 ==============================
 const btnBook1 = document.querySelector(".js-btn-modalbook1");
 const container_1 = document.querySelector(".js-container-1");
@@ -157,25 +154,16 @@ modalClosebook10.addEventListener("click", function close10() {
 
 // ==========================================================
 
-
 // ====================== Hiện cart shop ===============
-const cartList = document.querySelector('.js-cart')
-const btnAll = document.querySelectorAll(".card-book__footer button")
+const cartList = document.querySelector(".js-cart");
+const btnAll = document.querySelectorAll(".card-book__footer button");
 for (const btn__all of btnAll) {
   btn__all.addEventListener("click", function showCartShop() {
     cartList.classList.add("open-cart__list");
   });
 }
 
-
-
-
-
-
-
-
-
-// =============== ADD to Card ==================
+// =============== ADD to Card comom ==================
 
 const btnBuy = document.querySelectorAll(".btn-buy");
 btnBuy.forEach(function (button, index) {
@@ -190,17 +178,23 @@ btnBuy.forEach(function (button, index) {
       ".card-product__title ins span"
     ).innerText;
     addcart(productPrice, productName, productImg);
-    addCartIcon(productPrice, productName, productImg)
-    console.log(addCartIcon(productPrice, productName, productImg))
+    addCartIcon(productPrice, productName, productImg);
+
+    cartTotal();
+    deleteCart();
+    inputChange();
+    cartIconTotal();
+    delete__Cart();
+    input__Change();
   });
 });
+// =============================================================================================================================================================================================
+//===================== function add CART BACKGROUNG=======================================
 
 function addcart(productPrice, productName, productImg) {
   let cartShopping = document.createElement("div");
-  cartShopping.classList = "cart__wrapper--shopping";
-  let cartItem = document.querySelectorAll(
-    ".cart__body .cart__wrapper--shopping"
-  );
+  cartShopping.classList = "wrapper__shopping";
+  let cartItem = document.querySelectorAll(".cart__body .wrapper__shopping");
   for (let i = 0; i < cartItem.length; i++) {
     let productBook = document.querySelectorAll(".cart__name");
     if (productBook[i].innerHTML == productName) {
@@ -209,7 +203,6 @@ function addcart(productPrice, productName, productImg) {
     }
   }
 
-  // ============ CART BACKGROUNG ============
   let cartContent =
     '<div class="cart__shopping"><div class="cart__close"><ion-icon class="icon__close" name="close-outline"></ion-icon></div><div class="cart__name">' +
     productName +
@@ -221,59 +214,11 @@ function addcart(productPrice, productName, productImg) {
   cartShopping.innerHTML = cartContent;
   let cartBody = document.querySelector(".cart__body");
   cartBody.append(cartShopping);
-
-  // ============ CART ICON ================
-  // let cartWrapperShopping = document.createElement("div");
-  // cartWrapperShopping.classList = "wrapper__shopping";
-  // let cart__Item = document.querySelectorAll(
-  //   ".modal-cart__body .wrapper__shopping"
-  // );
-
-  // let cart__Content =
-  //   '<div class="modal-cart__shopping"><div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div><div class="modal-cart__name" href="">' +
-  //   productName +
-  //   '</div><div class="modal-cart__img"><img class="" src="' +
-  //   productImg +
-  //   '" alt=""></img></div></div><div class="modal-cart__quantity"><input class="modal-cart__amount" type="number" value="1" min="0"><div><strong> $</strong><span>' +
-  //   productPrice +
-  //   "</span></div></div>";
-  // let cart__Body = document.querySelector(".modal-cart__body ");
-  // cartWrapperShopping.innerHTML = cart__Content;
-  // cart__Body.append(cartWrapperShopping);
-
-  cartTotal();
-  deleteCart();
-
 }
 
-function addCartIcon(productPrice, productName, productImg) {
-  let cartWrapperShopping = document.createElement("div");
-  cartWrapperShopping.classList = "wrapper__shopping";
-  // let cart__Item = document.querySelectorAll(
-  //   ".modal-cart__body .wrapper__shopping"
-  // );
-
-  let cart__Content =
-    '<div class="modal-cart__shopping"><div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div><div class="modal-cart__name" href="">' +
-    productName +
-    '</div><div class="modal-cart__img"><img class="" src="' +
-    productImg +
-    '" alt=""></img></div></div><div class="modal-cart__quantity"><input class="modal-cart__amount" type="number" value="1" min="0"><div><strong> $</strong><span>' +
-    productPrice +
-    "</span></div></div>";
-  let cart__Body = document.querySelector(".modal-cart__body ");
-  cartWrapperShopping.innerHTML = cart__Content;
-  cart__Body.append(cartWrapperShopping);
-  cartIconTotal();
-}
-
-
-//  ============================ TOTAL Price ======================
-
+// ===============================FUNCTION CART BACKGROUND TOTAL Price=============================
 function cartTotal() {
-  let cartItem = document.querySelectorAll(
-    ".cart__body .cart__wrapper--shopping"
-  );
+  let cartItem = document.querySelectorAll(".cart__body .wrapper__shopping");
   let result = 0;
   for (let i = 0; i < cartItem.length; i++) {
     let inputValue = cartItem[i].querySelector(
@@ -288,6 +233,66 @@ function cartTotal() {
   subTotal.innerHTML = result;
 }
 
+// ================== Delete cart ==================
+function deleteCart() {
+  let cartItem = document.querySelectorAll(".cart__body .wrapper__shopping");
+  for (let i = 0; i < cartItem.length; i++) {
+    let cartClose = document.querySelectorAll(".icon__close");
+    cartClose[i].addEventListener("click", function (event) {
+      let cartDelete = event.target;
+      let cartCloseDelete =
+        cartDelete.parentElement.parentElement.parentElement;
+      cartCloseDelete.remove();
+      cartTotal();
+    });
+  }
+}
+
+//=================== Total change input cart backgroun ========
+function inputChange() {
+  let cartItem = document.querySelectorAll(".cart__body .wrapper__shopping");
+  for (let i = 0; i < cartItem.length; i++) {
+    let inputChangeValue = cartItem[i].querySelector(
+      ".cart__quantity .cart__amount"
+    );
+    inputChangeValue.addEventListener("change", function () {
+      cartTotal();
+    });
+  }
+}
+
+// ==================================================================================================================================================================================================
+// ======================= FUNCTION ADD CART ICON ====================
+
+function addCartIcon(productPrice, productName, productImg) {
+  let cartWrapperShopping = document.createElement("div");
+  cartWrapperShopping.classList = "wrapper__shopping";
+  let cart__Item = document.querySelectorAll(
+    ".modal-cart__body .wrapper__shopping"
+  );
+  for (let i = 0; i < cart__Item.length; i++) {
+    let productBook = document.querySelectorAll(".cart__name");
+    if (productBook[i].innerHTML == productName) {
+      alert("Sản phẩm đã có trong giỏ");
+      return;
+    }
+  }
+
+  let cart__Content =
+    '<div class="modal-cart__shopping"><div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div><div class="cart__name" href="">' +
+    productName +
+    '</div><div class="modal-cart__img"><img class="" src="' +
+    productImg +
+    '" alt=""></img></div></div><div class="modal-cart__quantity"><input class="modal-cart__amount" type="number" value="1" min="0"><div><strong> $</strong><span>' +
+    productPrice +
+    "</span></div></div>";
+  let cart__Body = document.querySelector(".modal-cart__body ");
+  cartWrapperShopping.innerHTML = cart__Content;
+  cart__Body.append(cartWrapperShopping);
+}
+
+// ===============================FUNCTION CART ICON Total price=============================
+
 function cartIconTotal() {
   let cart__Item = document.querySelectorAll(
     ".modal-cart__body .wrapper__shopping"
@@ -295,9 +300,9 @@ function cartIconTotal() {
   let resultCart = 0;
   for (let i = 0; i < cart__Item.length; i++) {
     let input__Value = cart__Item[i].querySelector(
-      ".cart__quantity .modal-cart__amount"
+      ".modal-cart__quantity input"
     ).value;
-  console.log(input__Value)
+
     let span__Price = cart__Item[i].querySelector(
       ".modal-cart__quantity span"
     ).innerHTML;
@@ -311,40 +316,36 @@ function cartIconTotal() {
 }
 
 // ================== Delete cart ==================
-function deleteCart() {
-  let cartItem = document.querySelectorAll(
-    ".cart__body .cart__wrapper--shopping"
-  );
+function delete__Cart() {
+  let cartItem = document.querySelectorAll(".cart__body .wrapper__shopping");
   for (let i = 0; i < cartItem.length; i++) {
-    let cartClose = document.querySelectorAll(".icon__close");
-    cartClose[i].addEventListener("click", function (event) {
+    let cart__Close = document.querySelectorAll(".modal-cart__close");
+    cart__Close[i].addEventListener("click", function (event) {
       let cartDelete = event.target;
       let cartCloseDelete =
         cartDelete.parentElement.parentElement.parentElement;
       cartCloseDelete.remove();
-      cartTotal();
+      cartIconTotal();
     });
   }
-
-  inputChange();
 }
 
-//=================== Total change input ========
-function inputChange() {
-  let cartItem = document.querySelectorAll(
-    ".cart__body .cart__wrapper--shopping"
+//=================== Total change input cart icon ========
+function input__Change() {
+  let cart__Item = document.querySelectorAll(
+    ".modal-cart__body .wrapper__shopping"
   );
-  for (let i = 0; i < cartItem.length; i++) {
-    let inputChangeValue = cartItem[i].querySelector(
-      ".cart__quantity .cart__amount"
+  for (let i = 0; i < cart__Item.length; i++) {
+    let input__ChangeValue = cart__Item[i].querySelector(
+      ".modal-cart__quantity .modal-cart__amount"
     );
-    inputChangeValue.addEventListener("change", function () {
-      cartTotal();
+    input__ChangeValue.addEventListener("change", function () {
+      cartIconTotal();
     });
   }
 }
 
-// ==================== Cart ===============
+// ==================== show Cart ICon===============
 
 let modalWrapper = document.querySelector(".js-modal-wrapper");
 let modalCart = document.querySelector(".js-modal-cart");
@@ -361,30 +362,4 @@ cartX.addEventListener("click", function closeCart() {
   modalWrapper.classList.remove("open-cart__wrapper");
 });
 
-//
-// const btn_Buy = document.querySelectorAll(".btn-buy");
-// btn_Buy.forEach(function (button, index) {
-//   button.addEventListener("click", function (event) {
-//     let btnItem = event.target;
-//     let cardProduct = btnItem.parentElement.parentElement;
-//     let productImg = cardProduct.querySelector(".card-product > img").src;
-//     let productName = cardProduct.querySelector(
-//       ".card-product__title h4 button"
-//     ).innerText;
-//     let productPrice = cardProduct.querySelector(
-//       ".card-product__title ins span"
-//     ).innerText;
-//     add__cart(productName, productImg, productPrice);
-//   });
-// });
-
-// function add__cart(productName, productImg, productPrice) {
-//   let carttr = document.createElement("div");
-//   carttr.classList = "wrapper__shopping";
-//   let cartContent = '<div class="modal-cart__shopping"><div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div><div class="modal-cart__name" href="">'+productName+'</div><div class="modal-cart__img"><img class="" src="'+productImg+'" alt=""></img></div></div><div class="modal-cart__quantity"><input class="cart__amount" type="number" value="1" min="0"><div><strong> $</strong><span>'+productPrice+'</span></div></div>'
-//   let cartItem = document.querySelector(
-//     ".modal-cart__body "
-//   );
-//   carttr.innerHTML = cartContent
-//   cartItem.append(carttr)
-// }
+// =========================================================================================================================

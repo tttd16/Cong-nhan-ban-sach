@@ -60,7 +60,7 @@ function signIn(e) {
       alert("Incorrect login credentials");
   }
   else{
-      location.href = "/demo-Store-book/";
+      location.href = "";
   }
   e.preventDefault();
 }

@@ -166,39 +166,50 @@ a.btn.btn-lg {
 #footer {
   background-color: #333;
   padding: 10rem 10rem;
+  margin-top: 10rem;
   text-align: center;
   font-size: 1.2rem;
-  margin-top: 10rem;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.2rem;
 }
 
-.icon-social {
-  font-size: 2rem;
+.icon__social {
+  font-size: 3rem;
+  display: flex;
   margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon-social span {
-  height: 2rem;
-  width: 2rem;
+.icon__social span {
   border: 0.2rem solid #0275d8;
   color: #0275d8;
   text-align: center;
   padding: 1.2rem;
-  border-radius: 30%;
+  border-radius: 50%;
   line-height: 2rem;
   margin-right: 1.2rem;
+}
+
+.icon__social span:hover {
+  cursor: pointer;
+  background-color: #0275d8;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 
 .copyright {
   font-size: 1.6rem;
   color: #fff;
+  margin-top: 2rem;
 }
 
 .copyright a {
   color: #0275d8;
   text-decoration: none;
+  font-family: "Bebas Neue", cursive;
 }
+
 
 /* ============== MODAL CART=============== */
 
