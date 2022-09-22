@@ -1026,7 +1026,7 @@ input:focus {
 
 
 /* ============================== Reponsive pc====================================== */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px ) and (max-width: 1200px)  {
 
   #header .header__log {
     width: 20%;
@@ -1052,7 +1052,6 @@ input:focus {
   }
   
   #book-info .book-info__header {
-    /* max-width: 780px; */
     min-width: 700px;
   }
   .book-info .book-info__content {
