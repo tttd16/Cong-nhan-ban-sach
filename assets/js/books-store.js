@@ -192,6 +192,9 @@ btnBuy.forEach(function (button, index) {
     mountCart();
   });
 });
+
+
+// =================================== FIX SAU=================================================
 // =============================================================================================================================================================================================
 //===================== function add CART BACKGROUNG=======================================
 
@@ -260,7 +263,6 @@ function mountCart() {
       cartItem[i].querySelector(".cart__quantity .cart__amount").value
     );
     mount__Cart = mount__Cart + inputChangeValue;
-    console.log(mount__Cart);
   }
   let sMount = document.querySelector(".nav__mount span");
   sMount.innerHTML = mount__Cart;
@@ -286,9 +288,9 @@ function inputChange() {
 
 function addCartIcon(productPrice, productName, productImg) {
   let cartWrapperShopping = document.createElement("div");
-  cartWrapperShopping.classList = "wrapper__shopping";
+  cartWrapperShopping.classList = "modal-wrapper__shopping";
   let cart__Item = document.querySelectorAll(
-    ".modal-cart__body .wrapper__shopping"
+    ".modal-cart__body .modal-wrapper__shopping"
   );
   for (let i = 0; i < cart__Item.length; i++) {
     let productBook = document.querySelectorAll(".cart__name");
@@ -315,7 +317,7 @@ function addCartIcon(productPrice, productName, productImg) {
 
 function cartIconTotal() {
   let cart__Item = document.querySelectorAll(
-    ".modal-cart__body .wrapper__shopping"
+    ".modal-cart__body .modal-wrapper__shopping"
   );
   let resultCart = 0;
   for (let i = 0; i < cart__Item.length; i++) {
@@ -338,7 +340,7 @@ function cartIconTotal() {
 // ================== Delete cart ==================
 function delete__Cart() {
   let cartItem = document.querySelectorAll(
-    ".modal-cart__body .wrapper__shopping"
+    ".modal-cart__body .modal-wrapper__shopping"
   );
   for (let i = 0; i < cartItem.length; i++) {
     let cart__Close = document.querySelectorAll(".modal-icon__close");
@@ -359,13 +361,10 @@ function delete__Cart() {
 function mountCart() {
   let mount__Cart = 0;
   let cartItem = document.querySelectorAll(
-    ".modal-cart__body .wrapper__shopping"
+    ".modal-cart__body .modal-wrapper__shopping"
   );
   for (let i = 0; i < cartItem.length; i++) {
-    let inputChangeValue = parseInt(
-      cartItem[i].querySelector(".modal-cart__quantity .modal-cart__amount")
-        .value
-    );
+    let inputChangeValue = parseInt(cartItem[i].querySelector(".modal-cart__quantity .modal-cart__amount").value);
     mount__Cart = mount__Cart + inputChangeValue;
   }
   let sMount = document.querySelector(".nav__mount span");
@@ -376,7 +375,7 @@ function mountCart() {
 
 function input__Change() {
   let cart__Item = document.querySelectorAll(
-    ".modal-cart__body .wrapper__shopping"
+    ".modal-cart__body .modal-wrapper__shopping"
   );
   for (let i = 0; i < cart__Item.length; i++) {
     let input__ChangeValue = cart__Item[i].querySelector(

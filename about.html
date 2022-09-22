@@ -47,6 +47,7 @@
 
       <div class="header__myacc">
         <ion-icon name="cart-outline" id="js-cart-modal"></ion-icon>
+        <p class="nav__mount"><span>0</span></p>
         <a class="my__acc btn" href="./myacc.html">My account</a>
       </div>
     </div>
@@ -57,69 +58,80 @@
 
     <!-- content about -->
     <div class="conten-ab">
-      <div class="img-ab">
-        <img src="./assets/img/img-about.png" alt="" />
-      </div>
-      <div class="img-content-ab">
-        <h2>About BookPress</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-          sunt quaerat, eligendi ad, ipsum sit culpa porro fuga atque delectus
-          nostrum sapiente cupind itate. Donec arcuit du ultricies non sodales
-          nec, tortor egestas sed faucibus nut ipsum sit amet ornare arcu
-          pulvinar.
-        </p>
-        <ul>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-caret-right"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
-              />
-            </svg>
-            Donec arcu dui, ultricies non sodales nec, faucibus ut ipsum.
-            Vestibulum ante ipsum primis in faucibus orci luctus
-          </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-caret-right"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
-              />
-            </svg>
-            Mauris ultrices ornare eleifend. Ut sollicitudin nibh vel tortor
-            tristique, sit amet ornare arcu pulvinar.
-          </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-caret-right"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
-              />
-            </svg>
-            Pellentesque eget dictum ligula. Morbi tristique sem tellus
-          </li>
-        </ul>
-        <button type="button" class="btn btn-primary btn-lg">Learn More</button>
-      </div>
+      <table>
+        <tr>
+          <td class="table-column-1">
+            <div class="img-ab">
+              <img src="./assets/img/img-about.png" alt="" />
+            </div>
+          </td>
+
+          <td class="table-column-2">
+            <div class="img-content-ab">
+              <h2>About BookPress</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nesciunt sunt quaerat, eligendi ad, ipsum sit culpa porro fuga
+                atque delectus nostrum sapiente cupind itate. Donec arcuit du
+                ultricies non sodales nec, tortor egestas sed faucibus nut ipsum
+                sit amet ornare arcu pulvinar.
+              </p>
+              <ul>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                    />
+                  </svg>
+                  Donec arcu dui, ultricies non sodales nec, faucibus ut ipsum.
+                  Vestibulum ante ipsum primis in faucibus orci luctus
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                    />
+                  </svg>
+                  Mauris ultrices ornare eleifend. Ut sollicitudin nibh vel
+                  tortor tristique, sit amet ornare arcu pulvinar.
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                    />
+                  </svg>
+                  Pellentesque eget dictum ligula. Morbi tristique sem tellus
+                </li>
+              </ul>
+              <button type="button" class="btn btn-primary btn-lg">
+                Learn More
+              </button>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <section id="footer">

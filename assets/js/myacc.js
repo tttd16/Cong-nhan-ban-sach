@@ -16,9 +16,6 @@
 // });
 
 
-// ===============NAV===========
-
-
 
 
 /** ============================SIGN UP=========================================== */
@@ -44,23 +41,25 @@ const signUp = (e) => {
       alert("Account Created.\n\nPlease Sign In using the link below.");
   }
   else{
-      alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
+      alert("Ooopppssss... Duplicate found!!!\nYou have already signed up");
   }
   e.preventDefault();
 }
 /** ======================================================================= */
 
 /** ============================SIGN IN=========================================== */
+let error = document.getElementById("error")
 function signIn(e) {
   let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
   let formData = JSON.parse(localStorage.getItem('formData')) || [];
   let exist = formData.length && 
   JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
   if(!exist){
-      alert("Incorrect login credentials");
+      error.innerHTML = "Your password is incorrect. Please try again"
   }
   else{
-      location.href = "/DEMO-STORE-BOOK/";
+     window.location.href = "/";
+     alert('Click ok to enter')
   }
   e.preventDefault();
 }

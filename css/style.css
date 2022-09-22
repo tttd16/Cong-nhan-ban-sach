@@ -105,6 +105,17 @@ section {
   padding-right: 3rem;
 }
 
+.header__myacc .nav__mount {
+  display: inline-block;
+  position: absolute;
+  transform: translate(103%, -39%);
+  font-size: 1.2rem;
+  padding: 3px 8px;
+  background-color: #ff6900;
+  color: #fff;
+  border-radius: 50%;
+}
+
 #header .header__myacc .my__acc {
   font-weight: 600;
   background-color: #0275d8;
@@ -1012,3 +1023,50 @@ input:focus {
   background-color: #025aa5;
   border-color: #025aa5;
 }
+
+
+/* ============================== Reponsive pc====================================== */
+@media only screen and (min-width: 1024px) {
+
+  #header .header__log {
+    width: 20%;
+  }
+  
+  
+  #header #header__nav #header__myacc {
+    width: 80%;
+  }
+  
+  #homepage .container #content {
+    min-width: 1000px;
+  }
+  #homepage .container #content #description {
+    width: 60%;
+    margin-right: 50px;
+    
+  }
+  #homepage .container #content #form {
+    width: 40%;
+    max-width: 600px;
+    min-width: 450px;
+  }
+  
+  #book-info .book-info__header {
+    /* max-width: 780px; */
+    min-width: 700px;
+  }
+  .book-info .book-info__content {
+    padding-left: 50px;
+    min-width: 500px;
+  }
+  .book-info .book-info__img {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .book-info .book-info__content .content-book {
+    min-width: 700px;
+    display: inline-block;
+  }
+  }
