@@ -22,7 +22,7 @@
       href="./assets/fonts/themify-icons/themify-icons.css"
     />
 
-    <title>my-account</title>
+    <title>Sign up</title>
   </head>
   <body>
     <!-- header -->
@@ -37,13 +37,10 @@
           />
         </a>
       </div>
-      <div class="header__myacc">
-        <a class="my__acc btn" href="./index.html">Log in</a>
-      </div>
     </div>
     <!-- title -->
     <div class="contact-title">
-      <h1>Sign up</h1>
+      <h1>Log in</h1>
     </div>
 
     <!-- form -->
@@ -52,31 +49,13 @@
         <div class="row justify-content-around">
           <form
             role="form"
-            onsubmit="signUp(event);"
+            onsubmit="signIn(event);"
             autocomplete="off"
             class="col-md-12 p-4 border border-secondary"
           >
-            <h1 class="text-upercase py-3">Sign up</h1>
+            <h1 class="text-upercase py-3">Log in</h1>
             <div class="form-group">
-              <label for="fname" class="my-2">First name </label>
-              <input
-                type="text"
-                name="fname"
-                id="fname"
-                class="form-control p-3"
-              />
-            </div>
-            <div class="form-group">
-              <label for="lname" class="my-2">Last name </label>
-              <input
-                type="text"
-                name="lname"
-                id="lname"
-                class="form-control p-3"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email" class="my-2">Email </label>
+              <label for="email" class="my-2">Username or email address </label>
               <input
                 type="email"
                 name="email"
@@ -90,12 +69,16 @@
                 type="password"
                 name="pwd"
                 id="pwd"
+                form="control"
                 class="form-control p-3"
               />
             </div>
             <div class="form-group">
-              <button type="submit" class="btn-signup">Sign Up</button>
+              <button type="submit" class="btn-signup">Log in</button>
             </div>
+            <p>
+              Don't have an account? <a href="./signup.html">Sign Up</a> here
+            </p>
           </form>
         </div>
       </div>
@@ -120,6 +103,41 @@
         </div>
       </div>
     </section>
+
+    <!-- -----------------Modal Cart----------- -->
+    <!-- <div class="modal-wrapper js-modal-wrapper">
+
+      <div class="modal-cart js-modal-cart">
+        <div class="modal-cart__header">
+          <h5>Cart</h5>
+          <ion-icon id="cart-icon" name="close-outline"></ion-icon>
+        </div>
+        <div class="modal-cart__container">
+          <div class="modal-cart__content">
+             -->
+    <!-- <div class="wrapper__shopping">
+              <div class="modal-cart__shopping">
+                <div class="modal-cart__close" href=""><ion-icon name="close-outline"></ion-icon></div>
+                <div class="modal-cart__name" href="">Forever Is A Long Time To Be Wrong</div>
+                <div class="modal-cart__img"><img class="" src="./assets/img/img book/forever is a long time.jpg" alt=""></img></div>
+              </div>
+              <div class="modal-cart__quantity">
+                <input class="cart__amount" type="number" value="1" min="0">
+                <div><strong> $</strong><span>22</span></div>
+              </div>
+            </div> -->
+
+    <!-- <div class="modal-cart__total">
+              <p> <strong>Subtotal:</strong> <span>$<span class="modal-cart__price">22.00</span></span></p>
+            </div>
+            <div class="modal-cart__btn">
+              <button class="modal-cart__btn--view">View cart</button>
+              <button class="modal-cart__btn--check">Check out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <script src="./assets/js/myacc.js"></script>
     <script
       type="module"

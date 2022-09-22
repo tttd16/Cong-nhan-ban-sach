@@ -32,7 +32,7 @@
     <!-- header -->
     <div id="header">
       <div class="header__log">
-        <a href="./home.html" class="header__logo--img">
+        <a href="./index.html" class="header__logo--img">
           <img
             class="logo"
             style="width: 150px"
@@ -43,7 +43,7 @@
       </div>
       <div id="header__nav">
         <ul>
-          <li><a href="./home.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./contact.html">Contact</a></li>
           <li><a class="active" href="./books-store.html">Books Store</a></li>
@@ -51,12 +51,9 @@
       </div>
 
       <div class="header__myacc">
-        <ion-icon
-          class="header__cart--icon"
-          id="js-cart-modal"
-          name="cart-outline"
-        ></ion-icon>
-        <a class="my__acc btn" href="./index.html">My account</a>
+        <ion-icon class="header__cart--icon" id="js-cart-modal" name="cart-outline"></ion-icon>
+        <p class="nav__mount"><span>0</span></p>
+        <a class="my__acc btn" href="./myacc.html">My account</a>
       </div>
     </div>
 
@@ -73,6 +70,7 @@
           <h4>Cart</h4>
           <div class="cart__container">
             <div class="cart__body">
+
               <!-- <div class="cart__wrapper--shopping">
                 <div class="cart__shopping">
                   <div class="cart__close" href=""><ion-icon name="close-outline"></ion-icon></div>
@@ -84,6 +82,7 @@
                   <span>22</span>
                 </div>
               </div> -->
+
             </div>
 
             <div class="cart__total">
@@ -91,7 +90,7 @@
               <p>$<span>0</span></p>
             </div>
 
-            <!-- btn check -->
+            
             <div class="cart__btn">
               <button class="cart__btn--view">View cart</button>
               <button class="cart__btn--check">Check out</button>
@@ -1319,6 +1318,7 @@
 
     <!-- -----------------Modal Cart----------- -->
     <div class="modal-wrapper js-modal-wrapper">
+
       <div class="modal-cart js-modal-cart">
         <div class="modal-cart__header">
           <h5>Cart</h5>
@@ -1339,12 +1339,9 @@
                 </div>
               </div> -->
             </div>
-            <div class="modal-cart__total">
-              <p>
-                <strong>Subtotal:</strong>
-                <span>$<span class="modal-cart__price">0</span></span>
-              </p>
-            </div>
+                <div class="modal-cart__total">
+                  <p> <strong>Subtotal:</strong> <span>$<span class="modal-cart__price">0</span></span></p>
+                </div>
             <div class="modal-cart__btn">
               <button class="cart__btn--view">View cart</button>
               <button class="cart__btn--check">Check out</button>
@@ -1353,7 +1350,7 @@
         </div>
       </div>
     </div>
-    <script
+      <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
