@@ -58,7 +58,7 @@ function signIn(e) {
       error.innerHTML = "Your password is incorrect. Please try again"
   }
   else{
-     window.location.href = "/";
+    window.location.href = "/";
      alert('Click ok to enter')
   }
   e.preventDefault();
